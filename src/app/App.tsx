@@ -1,15 +1,14 @@
-import { Suspense } from "react";
-import { useTranslation } from "react-i18next";
+import { Suspense } from 'react';
 
-import { AppRouter } from "./providers/router";
-import { classNames } from "shared/lib/classNames/classNames";
-import { useTheme } from "app/providers/ThemeProvider";
-import { Navbar } from "widgets/Navbar";
-import { Sidebar } from "widgets/Sidebar";
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useTheme } from 'app/providers/ThemeProvider';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
+import { AppRouter } from './providers/router';
 
-import "./styles/index.scss";
+import './styles/index.scss';
 
-const App = () => {
+function App() {
     const { theme } = useTheme();
 
     return (
@@ -22,7 +21,7 @@ const App = () => {
                 </div>
             </Suspense>
         </div>
-    )
+    );
 }
 
 export default App;
