@@ -7,12 +7,11 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 
-import cls from './Sidebar.module.scss';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 import AboutIcon from 'shared/assets/icons/about-20-20.svg';
 import MainIcon from 'shared/assets/icons/main-20-20.svg';
-
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
@@ -51,7 +50,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
                     to={RoutePath.main}
                     className={cls.item}
                 >
-                    <MainIcon  className={cls.icon}/>
+                    <MainIcon className={cls.icon} />
                     <span className={cls.link}>
                         {t('Главная')}
                     </span>
@@ -61,7 +60,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
                     to={RoutePath.about}
                     className={cls.item}
                 >
-                    <AboutIcon  className={cls.icon}/>
+                    <AboutIcon className={cls.icon} />
                     <span className={cls.link}>
                         {t('О сайте')}
                     </span>
