@@ -6,7 +6,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Button, ButtonSize, ButtonTheme } from './Button';
 
 export default {
-    title: 'ui/Button',
+    title: 'shared/Button',
     component: Button,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -24,6 +24,12 @@ export const Clear = Template.bind({});
 Clear.args = {
     children: 'Text',
     theme: ButtonTheme.CLEAR,
+};
+
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'Text',
+    theme: ButtonTheme.CLEAR_INVERTED,
 };
 
 export const Outline = Template.bind({});
