@@ -15,6 +15,13 @@
       }
     ],
     "profile": {
-      "name": "typicode"
+      "first": "Дмитрий",
+      "lastname": "Колесников",
+      "age": "28",
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://habrastorage.org/getpro/habr/hub/2b3/99b/964/2b399b964d456f3ad1bfddc0346b60d4.png"
     }
   }

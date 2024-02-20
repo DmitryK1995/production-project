@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
@@ -13,7 +13,7 @@ interface NavBarProps {
     className?: string;
 }
 
-export const Navbar = ({ className }: NavBarProps) => {
+export const Navbar = memo(({ className }: NavBarProps) => {
     const { t } = useTranslation();
 
     const [isAuthModal, setIsAuthModal] = useState(false);
@@ -67,4 +67,4 @@ export const Navbar = ({ className }: NavBarProps) => {
             )}
         </div>
     );
-};
+});
