@@ -33,7 +33,7 @@
   "profile": {
     "first": "Дмитрий",
     "lastname": "Колесников",
-    "age": "28",
+    "age": 28,
     "currency": "RUB",
     "country": "Russia",
     "city": "Moscow",
