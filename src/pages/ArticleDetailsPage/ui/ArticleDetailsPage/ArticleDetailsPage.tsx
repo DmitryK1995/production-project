@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -17,6 +17,9 @@ import { getArticleCommentsIsLoading } from 'pages/ArticleDetailsPage/model/sele
 import { fetchCommentsByArticleId }
     from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from 'features/addCommentForm';
+import { addCommentForArticle }
+    from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
@@ -38,6 +41,10 @@ const ArticleDetailsPage = ({ className }:ArticleDetailsPageProps) => {
 
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
 
+    const onSendComment = useCallback((text: string) => {
+        dispatch(addCommentForArticle(text));
+    }, [dispatch]);
+
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
     });
@@ -55,6 +62,7 @@ const ArticleDetailsPage = ({ className }:ArticleDetailsPageProps) => {
             <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} title={t('Комментарии')} />
+                <AddCommentForm onSendComment={onSendComment} />
                 <CommentList
                     isLoading={commentsIsLoading}
                     comments={comments}

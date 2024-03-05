@@ -19,7 +19,9 @@
       "img": "https://www.ankitweblogic.com/javascript/js_img/javascript.png",
       "views": 1022,
       "createdAt": "26.02.2024",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -94,6 +96,24 @@
       "text": "a comment about post 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "test",
+      "id": "15ceCUD"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "test2",
+      "id": "AcdX3LL"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Всем привет!",
+      "id": "MupKGcE"
     }
   ],
   "users": [
@@ -112,14 +132,28 @@
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJWmH9XxQwgac7jGhaMMLZZ1XBm1LS4MiVvg&usqp=CAU"
     }
   ],
-  "profile": {
-    "first": "Дмитрий",
-    "lastname": "Колесников",
-    "age": 28,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://zight.com/wp-content/uploads/2020/05/Best-Programmer-Productivity-Tools.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Дмитрий",
+      "lastname": "Колесников",
+      "age": 28,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://zight.com/wp-content/uploads/2020/05/Best-Programmer-Productivity-Tools.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Владислав",
+      "lastname": "Васильев",
+      "age": 25,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "VVs",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJWmH9XxQwgac7jGhaMMLZZ1XBm1LS4MiVvg&usqp=CAU"
+    }
+  ]
 }
