@@ -23,6 +23,10 @@ const article: Article = {
     img: 'https://www.ankitweblogic.com/javascript/js_img/javascript.png',
     views: 1022,
     createdAt: '26.02.2024',
+    user: {
+        id: '1',
+        username: 'admin',
+    },
     type: [ArticleType.IT],
     blocks: [
         {

@@ -6,7 +6,7 @@ import { Article, ArticleBlockType, ArticleType } from 'entities/Article/model/t
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
-    title: 'entities/ArticleDetails',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -22,6 +22,10 @@ const article: Article = {
     img: 'https://www.ankitweblogic.com/javascript/js_img/javascript.png',
     views: 1022,
     createdAt: '26.02.2024',
+    user: {
+        id: '1',
+        username: 'admin',
+    },
     type: [ArticleType.IT],
     blocks: [
         {
