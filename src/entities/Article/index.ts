@@ -1,3 +1,4 @@
+import { getArticleDetailsData } from './model/selectors/articleDetails';
 import {
     Article, ArticleSortField, ArticleType, ArticleView,
 } from './model/types/article';
@@ -19,3 +20,4 @@ export type { Article, ArticleDetailsSchema };
 export { ArticleView };
 export { ArticleSortSelector };
 export { ArticleTypeTabs };
+export { getArticleDetailsData };
