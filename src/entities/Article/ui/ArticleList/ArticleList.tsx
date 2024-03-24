@@ -2,15 +2,15 @@ import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
-import { Article, ArticleView } from 'entities/Article';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import {
     AutoSizer, List, ListRowProps, WindowScroller,
 } from 'react-virtualized';
 import { PAGE_ID } from 'widgets/Page/Page';
+import { Article, ArticleView } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
-import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 
 interface ArticleListProps {
     className?: string;

@@ -2,15 +2,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { memo, useCallback, useEffect } from 'react';
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
-import {
-    getArticleDetailsData,
-    getArticleDetailsError,
-    getArticleDetailsisLoading,
-} from 'entities/Article/model/selectors/articleDetails';
 import {
     Text, TextAlign, TextSize,
 } from 'shared/ui/Text/Text';
@@ -21,11 +14,18 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
-import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
+import {
+    getArticleDetailsData,
+    getArticleDetailsError,
+    getArticleDetailsisLoading,
+} from '../../model/selectors/articleDetails';
 import cls from './ArticleDetails.module.scss';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 
 interface ArticleDetailsProps {
     className?: string;
