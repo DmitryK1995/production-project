@@ -40,7 +40,12 @@ module.exports = {
         indent: [2, 4],
         'react/require-default-props': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        'i18next/no-literal-string': ['warn',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap'],
+            },
+        ],
         'max-len': ['error', { ignoreComments: true, code: 130 }],
         'no-literal-string': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
