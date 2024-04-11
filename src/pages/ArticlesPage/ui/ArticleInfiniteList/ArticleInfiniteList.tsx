@@ -1,0 +1,38 @@
+import { memo } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+
+import { useTranslation } from 'react-i18next';
+import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
+import { useSelector } from 'react-redux';
+import { Text } from 'shared/ui/Text/Text';
+import { getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView } from '../../model/selectors/articlePageSelectors';
+import { getArticles } from '../../model/slices/articlesPageSlice';
+
+interface ArticleInfiniteListProps {
+    className?: string;
+}
+
+export const ArticleInfiniteList = memo(({ className }:ArticleInfiniteListProps) => {
+    const { t } = useTranslation();
+
+    const articles = useSelector(getArticles.selectAll);
+
+    const isLoading = useSelector(getArticlesPageIsLoading);
+    const view = useSelector(getArticlesPageView);
+    const error = useSelector(getArticlesPageError);
+
+    if (error) {
+        return <Text text={t('Ошибка при загрузке статей')} />;
+    }
+
+    return (
+        <div className={classNames('', {}, [className])}>
+            <ArticleList
+                isLoading={isLoading}
+                view={view}
+                articles={articles}
+                className={className}
+            />
+        </div>
+    );
+});
