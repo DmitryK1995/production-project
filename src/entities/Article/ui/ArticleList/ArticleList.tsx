@@ -94,6 +94,7 @@ export const ArticleList = memo(({
                 scrollTop,
             }) => (
                 <div
+                    // @ts-ignore
                     ref={registerChild}
                     className={classNames(cls.ArticleList, {}, [className, cls[view]])}
                 >
