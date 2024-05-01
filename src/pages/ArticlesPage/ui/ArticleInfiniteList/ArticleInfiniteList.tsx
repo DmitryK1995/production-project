@@ -1,10 +1,10 @@
 import { memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-
 import { useTranslation } from 'react-i18next';
-import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 import { useSelector } from 'react-redux';
-import { Text } from 'shared/ui/Text/Text';
+import { classNames } from '@/shared/lib/classNames/classNames';
+
+import { ArticleList } from '@/entities/Article/ui/ArticleList/ArticleList';
+import { Text } from '@/shared/ui/Text/Text';
 import { getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView } from '../../model/selectors/articlePageSelectors';
 import { getArticles } from '../../model/slices/articlesPageSlice';
 

@@ -23,6 +23,7 @@
 }
 
 .content {
+    z-index: var(--modal-z-index);
     max-width: 60%;
     padding: 20px;
     background: var(--bg-color);
