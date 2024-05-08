@@ -23,7 +23,7 @@ export const StarRating = memo(({
 }:StarRatingProps) => {
     const { t } = useTranslation();
 
-    const [currentStarsCount, setCurrentStartCount] = useState(0);
+    const [currentStarsCount, setCurrentStartCount] = useState(selectedStars);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
 
     const onHover = (starsCount: number) => () => {
