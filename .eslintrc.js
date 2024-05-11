@@ -56,6 +56,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'dmitryk-plugin/path-checker': ['error', { alias: '@' }],
+        'dmitryk-plugin/public-api-imports': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
