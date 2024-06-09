@@ -56,6 +56,13 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'dmitryk-plugin/path-checker': ['error', { alias: '@' }],
+        'dmitryk-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         'dmitryk-plugin/public-api-imports': [
             'error',
             {
