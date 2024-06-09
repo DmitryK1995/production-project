@@ -19,6 +19,7 @@
     "ts-node": {
         "compilerOptions": {
           "module": "CommonJS",
+          "types": ["node"],
         }
       },
       "include": [

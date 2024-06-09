@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 
 import {
     Text,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import { VStack } from '@/shared/ui/Stack';
 import { Comment } from '../../index';
 import { CommentCard } from '../CommentCard/CommentCard';
