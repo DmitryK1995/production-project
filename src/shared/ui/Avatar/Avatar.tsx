@@ -1,5 +1,4 @@
 import { CSSProperties, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 
 import cls from './Avatar.module.scss';
