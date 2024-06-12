@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
@@ -34,14 +34,6 @@ export const ArticleSortSelector = memo(({
             content: t('убыванию'),
         },
     ], [t]);
-
-    const changeSortHandler = useCallback((newSort: string) => {
-        onChangeSort(newSort as ArticleSortField);
-    }, [onChangeSort]);
-
-    const changeOrderHandler = useCallback((newOrder: string) => {
-        onChangeOrder(newOrder as SortOrder);
-    }, [onChangeOrder]);
 
     const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(() => [
         {
