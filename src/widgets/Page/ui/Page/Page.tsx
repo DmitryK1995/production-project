@@ -12,9 +12,11 @@ import { getUIScrollByPath, uiActions } from '@/features/UI';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
+import { TestProps } from '@/shared/types/tests';
+
 import cls from './Page.module.scss';
 
-interface PageProps {
+interface PageProps extends TestProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
@@ -22,7 +24,9 @@ interface PageProps {
 
 export const PAGE_ID = 'PAGE_ID';
 
-export const Page = memo(({ className, children, onScrollEnd }:PageProps) => {
+export const Page = memo(({
+    className, children, onScrollEnd, ...props
+}:PageProps) => {
     const { t } = useTranslation();
 
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
@@ -55,6 +59,7 @@ export const Page = memo(({ className, children, onScrollEnd }:PageProps) => {
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
             id={PAGE_ID}
+            data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
             {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
