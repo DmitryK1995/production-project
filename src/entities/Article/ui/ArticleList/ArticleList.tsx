@@ -43,6 +43,7 @@ export const ArticleList = memo(({
     return (
         <div
             className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+            data-testid="ArticleList"
         >
             {
 
