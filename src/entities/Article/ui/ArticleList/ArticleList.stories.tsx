@@ -25,9 +25,7 @@ const article = {
         username: 'admin',
         avatar: 'https://zight.com/wp-content/uploads/2020/05/Best-Programmer-Productivity-Tools.jpg',
     },
-    type: [
-        'IT',
-    ],
+    type: ['IT'],
     blocks: [
         {
             id: '1',
@@ -84,7 +82,9 @@ const article = {
     ],
 } as Article;
 
-const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+const Template: ComponentStory<typeof ArticleList> = (args) => (
+    <ArticleList {...args} />
+);
 
 export const LoadingBig = Template.bind({});
 LoadingBig.args = {

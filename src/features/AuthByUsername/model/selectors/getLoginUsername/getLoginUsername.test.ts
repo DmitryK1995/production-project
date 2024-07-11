@@ -11,8 +11,7 @@ describe('getLoginError.test', () => {
         expect(getLoginUsername(state as StateSchema)).toEqual('12312312');
     });
     test('should work with empty state', () => {
-        const state: DeepPartial<StateSchema> = {
-        };
+        const state: DeepPartial<StateSchema> = {};
         expect(getLoginUsername(state as StateSchema)).toEqual('');
     });
 });

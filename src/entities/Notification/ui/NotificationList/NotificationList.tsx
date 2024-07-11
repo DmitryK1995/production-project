@@ -12,7 +12,7 @@ interface NotificationListProps {
     className?: string;
 }
 
-export const NotificationList = memo(({ className }:NotificationListProps) => {
+export const NotificationList = memo(({ className }: NotificationListProps) => {
     const { t } = useTranslation();
 
     const { data, isLoading } = useNotifications(null, {
@@ -38,7 +38,9 @@ export const NotificationList = memo(({ className }:NotificationListProps) => {
             gap="16"
             className={classNames(cls.NotificationList, {}, [className])}
         >
-            {data?.map((item) => (<NotificationItem key={item.id} item={item} />))}
+            {data?.map((item) => (
+                <NotificationItem key={item.id} item={item} />
+            ))}
         </VStack>
     );
 });

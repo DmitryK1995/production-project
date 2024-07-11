@@ -11,8 +11,7 @@ describe('getLoginError.test', () => {
         expect(getLoginIsLoading(state as StateSchema)).toEqual(true);
     });
     test('should work with empty state', () => {
-        const state: DeepPartial<StateSchema> = {
-        };
+        const state: DeepPartial<StateSchema> = {};
         expect(getLoginIsLoading(state as StateSchema)).toEqual(false);
     });
 });

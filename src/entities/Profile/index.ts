@@ -3,6 +3,4 @@ import { ProfileCard } from './ui/ProfileCard/ProfileCard';
 
 export type { Profile };
 
-export {
-    ProfileCard,
-};
+export { ProfileCard };

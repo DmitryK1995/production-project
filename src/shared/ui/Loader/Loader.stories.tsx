@@ -16,9 +16,7 @@ export default {
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {
-
-};
+Normal.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};

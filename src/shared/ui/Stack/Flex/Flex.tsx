@@ -4,7 +4,7 @@ import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 
 import cls from './Flex.module.scss';
 
-export type FlexJustify = 'start' | 'center' | 'end' | 'between'
+export type FlexJustify = 'start' | 'center' | 'end' | 'between';
 export type FlexAlign = 'start' | 'center' | 'end';
 export type FlexDirection = 'row' | 'column';
 export type FlexGap = '4' | '8' | '16' | '32';
@@ -34,7 +34,10 @@ const gapClasses: Record<FlexGap, string> = {
     32: cls.gap32,
 };
 
-type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+type DivProps = DetailedHTMLProps<
+    HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+>;
 
 export interface FlexProps extends DivProps {
     className?: string;
@@ -55,7 +58,7 @@ export const Flex = ({
     gap,
     max,
     ...otherProps
-}:FlexProps) => {
+}: FlexProps) => {
     const { t } = useTranslation();
 
     const classes = [

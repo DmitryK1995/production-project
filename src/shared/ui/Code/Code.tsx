@@ -10,7 +10,7 @@ interface CodeProps {
     text: string;
 }
 
-export const Code = memo(({ className, text }:CodeProps) => {
+export const Code = memo(({ className, text }: CodeProps) => {
     const onCopy = useCallback(() => {
         navigator.clipboard.writeText(text);
     }, [text]);
@@ -24,9 +24,7 @@ export const Code = memo(({ className, text }:CodeProps) => {
             >
                 <CopyIcon className={cls.copyIcon} />
             </Button>
-            <code>
-                {text}
-            </code>
+            <code>{text}</code>
         </pre>
     );
 });

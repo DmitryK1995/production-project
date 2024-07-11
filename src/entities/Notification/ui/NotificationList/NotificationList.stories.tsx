@@ -12,11 +12,12 @@ export default {
     },
 } as ComponentMeta<typeof NotificationList>;
 
-const Template: ComponentStory<typeof NotificationList> = (args) => <NotificationList {...args} />;
+const Template: ComponentStory<typeof NotificationList> = (args) => (
+    <NotificationList {...args} />
+);
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 Primary.decorators = [StoreDecorator({})];
 
 Primary.parameters = {
@@ -29,17 +30,20 @@ Primary.parameters = {
                 {
                     id: '1',
                     title: 'Уведомление',
-                    description: 'Поставь лайк и оставь комментарий под ДмитрийК',
+                    description:
+                        'Поставь лайк и оставь комментарий под ДмитрийК',
                 },
                 {
                     id: '2',
                     title: 'Уведомление 2',
-                    description: 'Поставь лайк и оставь комментарий под ДмитрийК',
+                    description:
+                        'Поставь лайк и оставь комментарий под ДмитрийК',
                 },
                 {
                     id: '3',
                     title: 'Уведомление 3',
-                    description: 'Поставь лайк и оставь комментарий под ДмитрийК',
+                    description:
+                        'Поставь лайк и оставь комментарий под ДмитрийК',
                 },
             ],
         },

@@ -4,9 +4,13 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended',
-        'airbnb', 'plugin:i18next/recommended',
-        'plugin:storybook/recommended'],
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
+        'prettier',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -24,12 +28,13 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
         'unused-imports/no-unused-imports': 'error',
-        'react/jsx-filename-extension': [2, {
-            extensions: ['.js', '.jsx', '.tsx'],
-        }],
+        'react/jsx-filename-extension': [
+            2,
+            {
+                extensions: ['.js', '.jsx', '.tsx'],
+            },
+        ],
         'react/react-in-jsx-scope': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
@@ -39,13 +44,24 @@ module.exports = {
         'react/jsx-props-no-spreading': 'warn',
         'no-shadow': 'off',
         'import/no-extraneous-dependencies': 'off',
-        indent: [2, 4],
         'react/require-default-props': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['warn',
+        'i18next/no-literal-string': [
+            'warn',
             {
                 markupOnly: true,
-                ignoreAttribute: ['role', 'as', 'data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'border'],
+                ignoreAttribute: [
+                    'role',
+                    'as',
+                    'data-testid',
+                    'to',
+                    'target',
+                    'justify',
+                    'align',
+                    'direction',
+                    'gap',
+                    'border',
+                ],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 130 }],
@@ -69,9 +85,14 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
+        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
     globals: {
         __IS_DEV__: true,

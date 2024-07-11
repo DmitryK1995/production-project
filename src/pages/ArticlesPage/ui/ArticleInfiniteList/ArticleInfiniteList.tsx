@@ -5,34 +5,40 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { ArticleList } from '@/entities/Article';
 import { Text } from '@/shared/ui/Text';
-import { getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView } from '../../model/selectors/articlePageSelectors';
+import {
+    getArticlesPageError,
+    getArticlesPageIsLoading,
+    getArticlesPageView,
+} from '../../model/selectors/articlePageSelectors';
 import { getArticles } from '../../model/slices/articlesPageSlice';
 
 interface ArticleInfiniteListProps {
     className?: string;
 }
 
-export const ArticleInfiniteList = memo(({ className }:ArticleInfiniteListProps) => {
-    const { t } = useTranslation();
+export const ArticleInfiniteList = memo(
+    ({ className }: ArticleInfiniteListProps) => {
+        const { t } = useTranslation();
 
-    const articles = useSelector(getArticles.selectAll);
+        const articles = useSelector(getArticles.selectAll);
 
-    const isLoading = useSelector(getArticlesPageIsLoading);
-    const view = useSelector(getArticlesPageView);
-    const error = useSelector(getArticlesPageError);
+        const isLoading = useSelector(getArticlesPageIsLoading);
+        const view = useSelector(getArticlesPageView);
+        const error = useSelector(getArticlesPageError);
 
-    if (error) {
-        return <Text text={t('Ошибка при загрузке статей')} />;
-    }
+        if (error) {
+            return <Text text={t('Ошибка при загрузке статей')} />;
+        }
 
-    return (
-        <div className={classNames('', {}, [className])}>
-            <ArticleList
-                isLoading={isLoading}
-                view={view}
-                articles={articles}
-                className={className}
-            />
-        </div>
-    );
-});
+        return (
+            <div className={classNames('', {}, [className])}>
+                <ArticleList
+                    isLoading={isLoading}
+                    view={view}
+                    articles={articles}
+                    className={className}
+                />
+            </div>
+        );
+    },
+);
