@@ -605,6 +605,10 @@
             "username": "admin",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://repository-images.githubusercontent.com/657736250/efe020c3-cfc2-41f9-be41-ad581ffc9969"
         },
         {
@@ -612,6 +616,10 @@
             "username": "user",
             "password": "123",
             "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
             "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
         },
         {
@@ -619,6 +627,10 @@
             "username": "manager",
             "password": "123",
             "roles": ["MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": true
+            },
             "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
         },
         {
@@ -626,6 +638,10 @@
             "username": "testuser",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
             "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
         }
     ],
