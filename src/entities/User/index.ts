@@ -8,6 +8,8 @@ import {
 import { userActions, userReducer } from './model/slice/userSlice';
 import { User, UserSchema } from './model/types/user';
 import { UserRole } from './model/consts/userConsts';
+import { saveJsonSettings } from './model/services/saveJsonSettings';
+import { useJsonSettings } from './model/selectors/jsonSettings';
 
 export { userReducer, userActions, getUserAuthData };
 
@@ -18,3 +20,7 @@ export { UserRole };
 export { getUserInited };
 
 export { isUserAdmin, isUserManager, getUserRoles };
+
+export { saveJsonSettings };
+
+export { useJsonSettings };
