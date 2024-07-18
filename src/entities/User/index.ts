@@ -10,6 +10,7 @@ import { User, UserSchema } from './model/types/user';
 import { UserRole } from './model/consts/userConsts';
 import { saveJsonSettings } from './model/services/saveJsonSettings';
 import { useJsonSettings } from './model/selectors/jsonSettings';
+import { initAuthData } from './model/services/initAuthData';
 
 export { userReducer, userActions, getUserAuthData };
 
@@ -24,3 +25,5 @@ export { isUserAdmin, isUserManager, getUserRoles };
 export { saveJsonSettings };
 
 export { useJsonSettings };
+
+export { initAuthData };
